@@ -1,0 +1,14 @@
+-- H5GG Script to Increase Clan Coins in Car Parking Multiplayer
+
+local clanCoinsAddress = 0x146a11f70 -- 
+
+-- Function to set clan coins to a specific value
+function setClanCoins(value)
+    gg.setValues({{address = clanCoinsAddress, flags = gg.TYPE_DWORD, value = value}})
+    gg.toast("Clan Coins Set to " .. value)
+end
+
+-- Increase clan coins by 10,000 (example)
+local increaseAmount = 10000
+gg.toast("Increasing Clan Coins...")
+setClanCoins(increaseAmount)
